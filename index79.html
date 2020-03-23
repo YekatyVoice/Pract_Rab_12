@@ -1,13 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-     <?php
-
-	include "script.php";
-
-?> 
+	 	 <script src="jquery-1.12.4.min.js"></script>
+	     <script src="jquery-1.4.1.min.js"></script>
 
     <title>AJAX</title>
 </head>
@@ -18,10 +14,15 @@
 <script>
 
 	 $('#ajax_test').click(function() {
-	     $.get('<?php echo "Ответ на вопрос"; ?>', function(data) {
+	     $.get('#script.php', function(data) {
 		     $('body').append(data);
 			 });
 	 });
+	 $(document).ready(function() {
+	 $("#ajax_test").click(function() {
+		 alert("Ответ: браузер не обрабатывает php скрипты, для корректной работы необходим веб-сервер");
+		 });
+	 }); 
 </script>
 </body>
 </html>
