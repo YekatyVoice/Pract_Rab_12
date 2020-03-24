@@ -1,14 +1,22 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Пример работы с массивами</title>
+	<script src="jquery-3.4.1.min.js"></script>	
 	<script type="text/javascript">  
-		 var myArray = [1, 2, 3, 4, 5];
-         alert(myArray.slice(2, 6));
+		 $(document).ready(function() {
+		 $("button").click(function() {
+	     var myArray = [1, 2, 3, 4, 5];
+	     var myArray1 = myArray.slice(2, 6);	 
+		 alert("Новый массив: " + myArray1);
+	     });
+     }) 
+
 	</script>
 </head>
 <body>
-
+     <p>Наш массив [1, 2, 3, 4, 5]</p>
+	 <button id="arr">Использование функции slice!</button>
 
 </body>
 </html>
